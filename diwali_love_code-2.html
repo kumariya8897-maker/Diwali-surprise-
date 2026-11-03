@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Diwali Surprise ❤️</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    padding: 22px; background: radial-gradient(circle at top, #243451, #101522 70%);
+    color: #f8f3e9; font-family: Georgia, 'Times New Roman', serif;
+  }
+  .card {
+    width: min(100%, 520px); padding: 25px; border: 1px solid #d7b76a;
+    border-radius: 22px; background: rgba(15, 20, 32, .92);
+    box-shadow: 0 18px 55px #0008; text-align: center;
+  }
+  .eyebrow { color: #f1cb76; letter-spacing: 2px; font: 12px Arial, sans-serif; }
+  h1 { font-size: clamp(25px, 7vw, 36px); margin: 12px 0; }
+  .sparkle { font-size: 27px; margin: 8px; }
+  pre {
+    text-align: left; white-space: pre-wrap; overflow-wrap: anywhere;
+    background: #080c14; border: 1px solid #39445a; border-radius: 14px;
+    padding: 17px; color: #c9e8ff; font: 13px/1.7 ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+  .comment { color: #8d9bb0; }
+  .key { color: #f4c76e; }
+  button {
+    border: 0; border-radius: 999px; padding: 14px 28px; margin: 8px 0 2px;
+    background: linear-gradient(135deg, #f6d98b, #d9a847); color: #1b1b22;
+    font: bold 15px Arial, sans-serif; letter-spacing: 1px; cursor: pointer;
+    box-shadow: 0 5px 18px #d9a84755;
+  }
+  button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+  .output {
+    display: none; margin-top: 20px; padding: 20px 16px; border-radius: 16px;
+    background: #fff5e7; color: #5a3440; animation: appear .5s ease;
+  }
+  .output h2 { margin: 0 0 12px; color: #a65a45; font-size: 22px; }
+  .output p { font-size: 18px; line-height: 1.65; margin: 8px 0; }
+  .footer { color: #b7bdca; font: 12px Arial, sans-serif; margin-top: 18px; }
+  @keyframes appear { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="eyebrow">A LITTLE SURPRISE FOR YOU</div>
+  <div class="sparkle">🪔 ✨ 💻 ✨ 🪔</div>
+  <h1>Honeyy, you've got a message ❤️</h1>
+  <p>Decode my little Diwali wish by pressing RUN.</p>
+  <pre><span class="comment">// A special Diwali message ❤️</span>
+
+<span class="key">const</span> recipient = "Honeyy 😍";
+
+<span class="key">const</span> DiwaliWish = {
+  occasion: "Diwali ✨",
+  message: "A little wish from my heart",
+};
+
+<span class="key">RUN</span>(DiwaliWish);</pre>
+  <button id="runButton" type="button">▶ RUN</button>
+  <section class="output" id="message" aria-live="polite">
+    <h2>✨ Message decoded ✨</h2>
+    <p><strong>Honeyy 😍</strong></p>
+    <p>I wish you the best Diwali ever ✨</p>
+    <p>May this Diwali bring too muchhhhhhh ❤️ happiness 😊 and joys in your life ❤️💖</p>
+    <div style="font-size:24px;margin-top:10px">🪔 💖 🪔</div>
+  </section>
+  <div class="footer">Made with love, just for you 💌</div>
+</main>
+<script>
+  const runButton = document.getElementById('runButton');
+  const message = document.getElementById('message');
+  runButton.addEventListener('click', () => {
+    message.style.display = 'block';
+    runButton.textContent = '✓ MESSAGE DECODED';
+    message.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+</script>
+</body>
+</html>
